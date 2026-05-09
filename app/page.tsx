@@ -49,11 +49,12 @@ export default function HomePage() {
 
       {/* About */}
       <section className="bg-sky-50 border-b border-sky-100 px-4 py-10 sm:px-8">
-        <div className="max-w-2xl mx-auto text-center space-y-3">
+        <div className="max-w-xl mx-auto space-y-3">
           <h2 className="text-lg font-bold text-sky-900">青空ルネサンスについて</h2>
-          <p className="text-sm text-sky-800 leading-relaxed">
+          <p className="text-sm text-sky-800 leading-relaxed whitespace-nowrap">
             すこしでも、青空に近い場所に行けるMAPをまとめました。
-            <br /><br />
+          </p>
+          <p className="text-sm text-sky-800 leading-relaxed">
             「青空ルネサンス」は、名古屋市内のビル屋上などの未利用地を活用し、街に賑わいを作り出す屋上利活用プロジェクトです。
             「名古屋を『屋上の街』にする」という目標を掲げ、普段は立ち入ることのできない屋上を小さな公園（ポケットパーク）として開放し、都市風景を変えていく活動を行っています。
           </p>
