@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import { useState, useMemo } from "react";
 import spotsData from "@/data/spots.json";
 import { Spot, Area } from "@/types/spot";
@@ -24,16 +25,27 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <header className="bg-white border-b border-gray-200 px-4 py-4 sm:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="text-2xl font-bold text-gray-900">
-            屋上MAP（名古屋編）edited by 青空ルネサンス
-          </h1>
-          <p className="text-sm text-gray-500 mt-0.5">
-            名古屋市内の屋上展望・屋上カフェスポットをまとめました（無料〜有料）
-          </p>
+      {/* Hero */}
+      <div className="w-full">
+        <div className="relative w-full h-[420px]">
+          <Image
+            src="/images/hero.jpg"
+            alt="屋上MAP（名古屋編）"
+            fill
+            className="object-cover"
+            priority
+            unoptimized
+          />
         </div>
-      </header>
+        <div className="bg-white px-4 py-5 sm:px-8 border-b border-gray-200">
+          <div className="max-w-7xl mx-auto">
+            <h1 className="text-2xl font-bold text-gray-900">
+              屋上MAP（名古屋編）
+            </h1>
+            <p className="text-sm text-gray-500 mt-0.5">edited by 青空ルネサンス</p>
+          </div>
+        </div>
+      </div>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-8 py-6 space-y-6">
         {/* Map */}
