@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import SpotImage from "./SpotImage";
 
 interface Props {
   photos: string[];
@@ -16,12 +16,10 @@ export default function PhotoGallery({ photos, name }: Props) {
   return (
     <div className="space-y-2">
       <div className="relative h-72 sm:h-96 rounded-xl overflow-hidden bg-gray-100">
-        <Image
+        <SpotImage
           src={photos[active]}
           alt={`${name} - 写真 ${active + 1}`}
-          fill
           className="object-cover"
-          unoptimized
           priority
         />
       </div>
@@ -35,12 +33,10 @@ export default function PhotoGallery({ photos, name }: Props) {
                 active === i ? "border-sky-500" : "border-transparent"
               }`}
             >
-              <Image
+              <SpotImage
                 src={photo}
                 alt={`サムネイル ${i + 1}`}
-                fill
                 className="object-cover"
-                unoptimized
               />
             </button>
           ))}
