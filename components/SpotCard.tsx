@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Spot } from "@/types/spot";
-import SpotImage from "./SpotImage";
 
 const AREA_COLORS: Record<string, string> = {
   名駅: "bg-violet-100 text-violet-700",
@@ -27,12 +26,10 @@ export default function SpotCard({ spot }: Props) {
   return (
     <Link href={`/spots/${spot.id}`} className="group block">
       <div className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-        <div className="relative h-44 bg-gray-100">
-          <SpotImage
-            src={spot.photos[0] ?? ""}
-            alt={spot.name}
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
-          />
+        <div className="relative h-44 bg-gray-200 flex items-center justify-center px-4">
+          <span className="text-gray-500 text-sm font-medium text-center leading-snug">
+            {spot.name}
+          </span>
           <span
             className={`absolute top-2 left-2 text-xs font-semibold px-2 py-0.5 rounded-full ${AREA_COLORS[spot.area]}`}
           >
